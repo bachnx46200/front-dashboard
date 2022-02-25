@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+// import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,8 +13,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IconsProviderModule } from './icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
-
+import { CommonModule } from '@angular/common'
 import { DemoNgZorroAntdModule } from './ng-zorro-antd.module';
+
 registerLocaleData(vi);
 
 @NgModule({
@@ -22,7 +23,7 @@ registerLocaleData(vi);
     AppComponent,
   ],
   imports: [
-    BrowserModule,
+    // BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
@@ -31,6 +32,7 @@ registerLocaleData(vi);
     NzLayoutModule,
     NzMenuModule,
     DemoNgZorroAntdModule,
+    CommonModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: vi_VN }],
   bootstrap: [AppComponent]
